@@ -59,7 +59,7 @@
 			</li>
 
 			<li class="image-cover">
-				<img src="profile/yaemiko.jpg">
+				<img src="profile/hutao.jpg">
 			</li>
 			
 		</ul>
@@ -146,7 +146,7 @@
 
 		<ul class="time">
 			<li>
-				<p class="says"><span class="ucapan">Good Morning,</span> Farhan !</p>
+				<p class="says"><span class="ucapan" id="ucapan">Good Morning,</span> Farhan !</p>
 			</li>
 
 			<li class="clock" id="clock"></li>
@@ -158,8 +158,16 @@
 
 			<p class="randomText">"Hari Baru Semangat Baru!"</p>
 
-			<span class="material-symbols-outlined timeIcon">
+			<span class="material-symbols-outlined timeIcon morningCon" id="morningCon">
 				partly_cloudy_day
+			</span>
+
+			<span class="material-symbols-outlined timeIcon sunCon" id="sunCon">
+				clear_day
+			</span>
+
+			<span class="material-symbols-outlined timeIcon nightCon" id="nightCon">
+				nights_stay
 			</span>
 
 			<ul class="notifikasiWelcome">
@@ -194,9 +202,16 @@
 
 		</div>
 
-		<div class="statistik">
-			<div class="bxchart"></div>
-			<div class="bxchart"></div>
+		<div class="statis">
+
+			<div class="cbox saranaBox">
+				<canvas id="saranaChart"></canvas>
+			</div>
+
+			<div class="cbox biayaBox">
+				<canvas id="biayaChart"></canvas>
+			</div>
+			
 		</div>
 		
 		<div class="data">
@@ -267,9 +282,13 @@
 
 	</div>
 
+	dd
+
 	<!-- This is JavaScript Nest -->
-	<script src="index.js"></script>
+	<script src="js/index.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="js/my_chart.js"></script>
+		 
 	
 </body>
 </html>

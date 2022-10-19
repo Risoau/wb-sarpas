@@ -58,7 +58,6 @@
     font-weight: 600;
     font-size: 25px;
 
-    background: linear-gradient(90deg, #00D7FF 0%, #F637EC 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -127,25 +126,6 @@
     letter-spacing: 2px;
 }
 
-.main .welcome .timeIcon {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48;
-  
-  position: absolute;
-  cursor: default;
-
-  color: #2192FF;
-
-  font-size: 100px;
-  right: 0%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-}
-
 .main .welcome .notifikasiWelcome {
     position: absolute;
     width: 400px;
@@ -203,7 +183,7 @@
     height: 800px;
 
     left: 30px;
-    top: 60px;
+    margin-top: 50px;
 }
 
 .main .data .dataFormating {
@@ -311,27 +291,55 @@
     background-color: #fff;
 }
 
-.main .statistik {
+.main .statis {
     position: relative;
+    left: 30px;
     width: 1400px;
-    height: auto;
-    padding: 20px;
+    height: fit-content;
 
     display: grid;
-    grid-template-columns: 1fr 2fr;
-
-    left: 30px;
-    top: 30px;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 40px;
     
-    /* border-radius: 15px;
-    background: linear-gradient(145deg, #f5f5f5, #FEFEFE);
-    box-shadow:  17px 17px 35px #dddddd,
-    -17px -17px 35px #ffffff; */
+    margin-top: 50px;
 }
 
-.main .statistik .bxchart {
+.main .statis .cbox {
+    position: relative;
+
+    padding: 10px;
+
     border-radius: 15px;
-    background: linear-gradient(145deg, #f5f5f5, #FEFEFE);
+    background: linear-gradient(145deg, #F3F3F3, #FEFEFE);
     box-shadow:  17px 17px 35px #dddddd,
-    -17px -17px 35px #ffffff;
+            -17px -17px 35px #ffffff;
+}
+
+.main .welcome .timeIcon {
+    position: absolute;
+    cursor: default;
+  
+    font-size: 100px;
+    right: 0%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  
+}
+
+.main .welcome .morningCon {
+    display: block;
+    
+    color: #2192FF;
+}
+
+.main .welcome .sunCon {
+    display: block;
+    
+    color: #FCE700;
+}
+
+.main .welcome .nightCon {
+    display: block;
+    
+    color: #04009A;
 }
