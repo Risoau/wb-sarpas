@@ -25,7 +25,7 @@ setInterval(() => {
 
 setInterval(() => {
     const namaBulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-    const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kammis", "Jum'at", "Sabtu"];
+    const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"];
 
     let date = new Date();
     let month = namaBulan[date.getMonth()];
@@ -52,6 +52,8 @@ if ( takeHour >= 0 && takeHour <= 12 ) {
     ncon.style.display = 'none';
 
     ucapan.innerHTML = 'Good Morning,';
+
+    document.documentElement.style.setProperty("--color-js", "#00D7FF");
 }
 else if ( takeHour >= 13 && takeHour <= 18 ) {
     mcon.style.display = 'none';
@@ -59,6 +61,8 @@ else if ( takeHour >= 13 && takeHour <= 18 ) {
     ncon.style.display = 'none';
 
     ucapan.innerHTML = 'Good Afternoon,';
+
+    document.documentElement.style.setProperty("--color-js", "#FCE700");
 } 
 else if ( takeHour >= 19 && takeHour <= 24   ) {
     mcon.style.display = 'none';
@@ -66,6 +70,8 @@ else if ( takeHour >= 19 && takeHour <= 24   ) {
     ncon.style.display = 'block';
 
     ucapan.innerHTML = 'Good Evening,';
+
+    document.documentElement.style.setProperty("--color-js", "#04009A");
 }
 else {
     console.log("Error Code 001");
@@ -73,43 +79,36 @@ else {
 
 let rdmText = document.getElementById("randomTxt");
 
-// let myRandomText = () => {
-//     let chchc = 3;
-//     switch(chchc) {
-//         case 6:
-//             rdmText.innerHTML = '"Semalam mimpi apa?"';
-//             break;
-//         case 7:
-//             rdmText.innerHTML = '"Time for Breakfast!"';
-//             break;
-//         case 9: 
-//             rdmText.innerHTML = '"Waktu nya pemanasan!"';
-//             break;
-//         case 11:
-//             rdmText.innerHTML = '"Akhirnya waktu istirahat~"';
-//             break;
-//         case 14: 
-//             rdmText.innerHTML = '"Lunch Time!"';
-//             break;
-//         case 15:
-//             rdmText.innerHTML = '"Waktu nya kembali kerumah!"';
-//             break;
-//         case 19: 
-//             rdmText.innerHTML = '"Makan Malam"';
-//             break;
-//         case 20: 
-//             rdmText.innerHTML = '"Membaca dengan fantasi!"';
-//             break;
-//         case 21: 
-//             rdmText.innerHTML = '"Good Night, Have a sweet dream~"';
-//             break;
-//     }
-// }
+let myRandomText = () => {
+    switch(takeHour) {
+        case 6:
+            rdmText.innerHTML = '"Semalam mimpi apa?"';
+            break;
+        case 7:
+            rdmText.innerHTML = '"Time for Breakfast!"';
+            break;
+        case 9: 
+            rdmText.innerHTML = '"Waktu nya pemanasan!"';
+            break;
+        case 11:
+            rdmText.innerHTML = '"Akhirnya waktu istirahat~"';
+            break;
+        case 14: 
+            rdmText.innerHTML = '"Lunch Time!"';
+            break;
+        case 15:
+            rdmText.innerHTML = '"Waktu nya kembali kerumah!"';
+            break;
+        case 19: 
+            rdmText.innerHTML = '"Makan Malam"';
+            break;
+        case 20: 
+            rdmText.innerHTML = '"Membaca dengan fantasi!"';
+            break;
+        case 21: 
+            rdmText.innerHTML = '"Good Night, Have a sweet dream~"';
+            break;
+    }
+}
 
-// setInterval(myRandomText, 1000);
-
-let x = document.getElementById("ucapan").style.setProperty = takeHour;
-
-document.documentElement.style.setProperty("$cond", x);
-
-console.log(x);
+setInterval(myRandomText, 1000);
