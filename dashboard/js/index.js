@@ -52,27 +52,64 @@ if ( takeHour >= 0 && takeHour <= 12 ) {
     ncon.style.display = 'none';
 
     ucapan.innerHTML = 'Good Morning,';
-
-    ucapan.style.background = 'linear-gradient(90deg, #00D7FF 0%, #F637EC 100%)';
 }
 else if ( takeHour >= 13 && takeHour <= 18 ) {
     mcon.style.display = 'none';
     scon.style.display = 'block';
     ncon.style.display = 'none';
 
-    ucapan.innerHTML = 'Afternoon Morning,';
-
-    ucapan.style.background = 'linear-gradient(90deg, #FCE700 0%, #F637EC 100%)';
+    ucapan.innerHTML = 'Good Afternoon,';
 } 
-else if ( takeHour >= 19 && takeHour <= 23   ) {
+else if ( takeHour >= 19 && takeHour <= 24   ) {
     mcon.style.display = 'none';
     scon.style.display = 'none';
     ncon.style.display = 'block';
 
-    ucapan.innerHTML = 'Afternoon Morning,';
-
-    ucapan.style.background = 'linear-gradient(90deg, #04009A 0%, #F637EC 100%)';
+    ucapan.innerHTML = 'Good Evening,';
 }
 else {
     console.log("Error Code 001");
 }
+
+let rdmText = document.getElementById("randomTxt");
+
+// let myRandomText = () => {
+//     let chchc = 3;
+//     switch(chchc) {
+//         case 6:
+//             rdmText.innerHTML = '"Semalam mimpi apa?"';
+//             break;
+//         case 7:
+//             rdmText.innerHTML = '"Time for Breakfast!"';
+//             break;
+//         case 9: 
+//             rdmText.innerHTML = '"Waktu nya pemanasan!"';
+//             break;
+//         case 11:
+//             rdmText.innerHTML = '"Akhirnya waktu istirahat~"';
+//             break;
+//         case 14: 
+//             rdmText.innerHTML = '"Lunch Time!"';
+//             break;
+//         case 15:
+//             rdmText.innerHTML = '"Waktu nya kembali kerumah!"';
+//             break;
+//         case 19: 
+//             rdmText.innerHTML = '"Makan Malam"';
+//             break;
+//         case 20: 
+//             rdmText.innerHTML = '"Membaca dengan fantasi!"';
+//             break;
+//         case 21: 
+//             rdmText.innerHTML = '"Good Night, Have a sweet dream~"';
+//             break;
+//     }
+// }
+
+// setInterval(myRandomText, 1000);
+
+let x = document.getElementById("ucapan").style.setProperty = takeHour;
+
+document.documentElement.style.setProperty("$cond", x);
+
+console.log(x);

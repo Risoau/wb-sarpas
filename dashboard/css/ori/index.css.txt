@@ -177,12 +177,9 @@ header ul .image-cover img {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background: linear-gradient(90deg, #FCE700 0%, #F637EC 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   font-weight: 600;
   font-size: 25px;
+  background: linear-gradient(90deg, #00D7FF 0%, #F637EC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -230,7 +227,6 @@ header ul .image-cover img {
   top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-transform: capitalize;
   font-weight: 600;
   letter-spacing: 2px;
 }
