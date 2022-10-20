@@ -79,36 +79,21 @@ else {
 
 let rdmText = document.getElementById("randomTxt");
 
-let myRandomText = () => {
-    switch(takeHour) {
-        case 6:
-            rdmText.innerHTML = '"Semalam mimpi apa?"';
-            break;
-        case 7:
-            rdmText.innerHTML = '"Time for Breakfast!"';
-            break;
-        case 9: 
-            rdmText.innerHTML = '"Waktu nya pemanasan!"';
-            break;
-        case 11:
-            rdmText.innerHTML = '"Akhirnya waktu istirahat~"';
-            break;
-        case 14: 
-            rdmText.innerHTML = '"Lunch Time!"';
-            break;
-        case 15:
-            rdmText.innerHTML = '"Waktu nya kembali kerumah!"';
-            break;
-        case 19: 
-            rdmText.innerHTML = '"Makan Malam"';
-            break;
-        case 20: 
-            rdmText.innerHTML = '"Membaca dengan fantasi!"';
-            break;
-        case 21: 
-            rdmText.innerHTML = '"Good Night, Have a sweet dream~"';
-            break;
-    }
-}
+let i = 0;
 
-setInterval(myRandomText, 1000);
+let arrText = [
+    '"A"',
+    '"B"',
+    '"C"',
+];
+
+let myRandomText = () => {
+    rdmText.innerHTML = arrText[i];
+    i++;
+
+    if (i == 3) {
+        i = 0;
+    }
+};
+
+setInterval(myRandomText, 5000);
