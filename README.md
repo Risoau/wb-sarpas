@@ -9,8 +9,6 @@
 * Dapatkan kabar terbaru tentang pengemabangan website <span>Sarpas</span> melalui :
     * [Github](https://github.com/Risoau/wb-sarpas)
 
-<div>
-
 <style>
 
 * {
@@ -37,5 +35,3 @@ img {
 }
 
 </style>
-
-</div>
