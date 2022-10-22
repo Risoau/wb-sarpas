@@ -1,0 +1,392 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(145deg, #F3F3F3, #FEFEFE);
+}
+
+header {
+  position: fixed;
+  width: 1920px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 17px 30px #dddddd;
+  z-index: 10;
+}
+header .header-title {
+  position: absolute;
+  left: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 23px;
+  padding: 7px 10px 4px 10px;
+  color: #2192FF;
+  outline: 2px dashed #2192FF;
+  letter-spacing: 3.5px;
+  font-family: "Comfortaa";
+}
+header ul {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  right: 30px;
+}
+header ul .name-profile {
+  position: relative;
+  list-style: none;
+  font-family: "Roboto Slab";
+}
+header ul .image-cover {
+  position: relative;
+  list-style: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+header ul .image-cover img {
+  width: 100%;
+  height: auto;
+}
+
+.navigation {
+  position: fixed;
+  width: 200px;
+  height: 1080px;
+  left: 0;
+  top: 80px;
+  background-color: #463CFF;
+  /* box-shadow: 0 1px 15px rgba(0, 0, 0, 0.3); */
+  background: #463CFF;
+  box-shadow: 17px 0px 30px #dddddd;
+  z-index: 11;
+}
+.navigation ul {
+  position: relative;
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.navigation ul li {
+  width: 200px;
+  transition: 300ms;
+}
+.navigation ul li a {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  font-family: "Comfortaa";
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+  justify-content: left;
+  color: #fff;
+  font-size: 14.2px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  transition: 300ms;
+  text-decoration: none;
+}
+.navigation ul li a .material-symbols-outlined {
+  margin-left: 20px;
+  transition: 300ms;
+}
+.navigation ul li:hover {
+  background-color: #655CFF;
+  cursor: pointer;
+}
+.navigation ul li.active {
+  width: 218px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  /* box-shadow: 0 0.7px 17px rgba(27, 1, 78, 0.19); */
+  background: linear-gradient(145deg, #5003E9, #6622EB);
+  box-shadow: -18px 8px 25px #4F0ECF, -18px -8px 25px #4F0ECF;
+  background-color: #5003E9;
+}
+.navigation ul li.active a {
+  font-size: 15.5px;
+  letter-spacing: 2.5px;
+}
+.navigation ul li.active a .navigationGIcon {
+  margin-left: 35px;
+}
+
+.main {
+  position: absolute;
+  left: 55%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  width: 1500px;
+  height: 800px;
+  padding: 0 20px;
+  font-size: 20px;
+  background-color: transparent;
+}
+.main .time {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  font-weight: 600;
+  font-size: 16px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  margin-bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1400px;
+  height: 40px;
+  list-style: none;
+}
+.main .time .says {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translate(0%, -50%);
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0.8px;
+  font-family: "Montserrat";
+}
+.main .time .says .ucapan {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-weight: 600;
+  font-size: 25px;
+  background: linear-gradient(90deg, #00D7FF 0%, #F637EC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.main .time .clock {
+  position: relative;
+  width: 110px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat";
+  letter-spacing: 2px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #f5f5f5, #FEFEFE);
+  box-shadow: 17px 17px 34px #dddddd, -17px -17px 34px #ffffff;
+}
+.main .time .hari {
+  position: relative;
+  width: 285px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat";
+  letter-spacing: 2px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #f5f5f5, #FEFEFE);
+  box-shadow: 17px 17px 34px #dddddd, -17px -17px 34px #ffffff;
+}
+.main .welcome {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 1400px;
+  height: 200px;
+  padding: 20px 30px;
+  font-family: "Montserrat";
+  border-radius: 15px;
+  background: linear-gradient(145deg, #f5f5f5, #FEFEFE);
+  box-shadow: 17px 17px 35px #dddddd, -17px -17px 35px #ffffff;
+}
+.main .welcome .randomText {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.main .welcome .notifikasiWelcome {
+  position: absolute;
+  width: 400px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  bottom: 25px;
+  list-style: none;
+}
+.main .welcome .notifikasiWelcome .nof {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  transition: 300ms;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #f5f5f5;
+  box-shadow: inset 5px 5px 20px #dddddd, inset -5px -5px 20px #ffffff;
+}
+.main .welcome .notifikasiWelcome .nof .notifikasiGIcon {
+  font-size: 26px;
+}
+.main .welcome .notifikasiWelcome .nof .nofDot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 2px;
+  right: 2px;
+  border-radius: 50px;
+  background-color: #FF1E1E;
+}
+.main .welcome .timeIcon {
+  position: absolute;
+  cursor: default;
+  font-size: 100px;
+  right: 0%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .welcome .morningCon {
+  display: block;
+  color: #2192FF;
+}
+.main .welcome .sunCon {
+  display: block;
+  color: #FCE700;
+}
+.main .welcome .nightCon {
+  display: block;
+  color: #04009A;
+}
+.main .data {
+  position: relative;
+  width: 1400px;
+  height: 800px;
+  left: 30px;
+  margin-top: 50px;
+}
+.main .data .dataFormating {
+  position: relative;
+  width: 1400px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  overflow: hidden;
+  border: none;
+  border-collapse: collapse;
+  border-radius: 10px;
+  background: #f5f5f5;
+  box-shadow: 12px 12px 23px #dddddd, -12px -12px 23px #ffffff;
+}
+.main .data .dataFormating table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.main .data .dataFormating .trHead {
+  position: relative;
+  width: 1300px;
+  height: 40px;
+  color: #fff;
+  letter-spacing: 1px;
+  background-color: #2192FF;
+}
+.main .data .dataFormating .daTable {
+  height: 60px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background-color: #f8f8f8;
+}
+.main .data .dataFormating .daTable:nth-child(even) {
+  background-color: #fff;
+}
+.main .data .listTable {
+  position: relative;
+  width: 1500px;
+  height: 40px;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.main .data .listTable li .seTable {
+  position: relative;
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-family: "Comfortaa";
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  background: #f5f5f5;
+  box-shadow: inset 4px 4px 8px #d8d8d8, inset -4px -4px 8px #ffffff;
+}
+.main .data .listTable li .telusuriButtonClass {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: 300ms;
+  cursor: pointer;
+  background: #f5f5f5;
+  box-shadow: inset 4px 4px 8px #d8d8d8, inset -4px -4px 8px #ffffff;
+}
+.main .statis {
+  position: relative;
+  left: 30px;
+  width: 1400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  margin-top: 50px;
+}
+.main .statis .cbox {
+  position: relative;
+  padding: 10px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #F3F3F3, #FEFEFE);
+  box-shadow: 17px 17px 35px #dddddd, -17px -17px 35px #ffffff;
+}/*# sourceMappingURL=index.css.map */
