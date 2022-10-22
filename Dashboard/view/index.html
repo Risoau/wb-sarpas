@@ -2,35 +2,14 @@
 <html lang="en">
 <head>
 
-	<!-- 
-
-	If you are looking for a piece of content, press CTRL + F
-	type what you want to find based on the data below:
-
-		Inside head:
-			1. Layout CSS Link
-			2. Google Font
-			3. Goole Icon
-		
-		Inside body:
-			1. This is Header
-			2. This is Navigation
-			3. This is Main
-			0. This is JavaScript Nest
-
-	-->
-
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>Dashboard Beta</title>
 
-	<!-- Layout CSS Link -->
-	<!-- <link rel="stylesheet" href="css/header.css"> -->
-	<!-- <link rel="stylesheet" href="css/navigation.css"> -->
-	<!-- <link rel="stylesheet" href="main.css">
-	<link rel="stylesheet" href="css/index.css"> -->
-	<link rel="stylesheet" href="css/index.css">
+	<!-- CSS Connection -->
+	<link rel="stylesheet" href="../resource/css/index.css">
 
 	<!-- Google Font -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
@@ -46,29 +25,29 @@
 </head>
 <body>
 
-	<!-- This is Header  -->
+	<!-- Header  -->
 	<header>
 		
-		<p class="header-title">
+		<p class="webname">
 			Sarpas
 		</p>
 		
-		<ul class="header-menu">
+		<ul>
 
-			<li class="name-profile">
+			<li class="username">
 				Farhan Raditya Al Gazali
 			</li>
 
-			<li class="image-cover">
-				<img src="profile/hutao.jpg">
+			<li class="profile">
+				<img src="../resource/image/hutao.jpg">
 			</li>
 			
 		</ul>
 		
 	</header>
 
-	<!-- This is Navigation -->
-	<div class="navigation">
+	<!-- Navigation -->
+	<div class="nav">
 
 		<ul>
 
@@ -76,7 +55,7 @@
 			<li class="lii dashboard active">
 
 					<a>
-						<span class="material-symbols-outlined navigationGIcon">
+						<span class="material-symbols-outlined Icon">
 							Dashboard
 						</span>
 						
@@ -89,7 +68,7 @@
 			<li class="lii update">
 
 					<a>
-						<span class="material-symbols-outlined navigationGIcon">
+						<span class="material-symbols-outlined Icon">
 							Update
 						</span>
 
@@ -102,7 +81,7 @@
 			<li class="lii new">
 
 					<a>
-						<span class="material-symbols-outlined navigationGIcon">
+						<span class="material-symbols-outlined Icon">
 							Magic_Button
 						</span>
 
@@ -115,7 +94,7 @@
 			<li class="lii report">
 
 					<a>
-						<span class="material-symbols-outlined navigationGIcon">
+						<span class="material-symbols-outlined Icon">
 							Chat
 						</span>
 
@@ -128,7 +107,7 @@
 			<li class="lii setting">
 
 					<a>
-						<span class="material-symbols-outlined navigationGIcon">
+						<span class="material-symbols-outlined Icon">
 							Settings
 						</span>
 
@@ -141,60 +120,62 @@
 		
 	</div>
 
-	<!-- This is Main  -->
-
+	<!-- Main  -->
 	<div class="main">
 
-		<ul class="time">
+		<ul class="list">
+
 			<li>
-				<p class="says"><span class="ucapan" id="ucapan">Good Morning,</span> Farhan !</p>
+				<p class="say">
+					<span class="text" id="text">Good Morning,</span> Farhan !
+				</p>
 			</li>
 
-			<li class="clock" id="clock"></li>
-			<li class="hari" id="hari"></li>
+			<li class="time" id="time"></li>
+			<li class="date" id="date"></li>
 			
 		</ul>
 
-		<div class="welcome">
+		<div class="card">
 
-			<p class="randomText" id="randomTxt">"Hari Baru Semangat Baru!"</p>
+			<p class="random" id="random">"Jika mau mu itu maka berusahalah!"</p>
 
-			<span class="material-symbols-outlined timeIcon morningCon" id="morningCon">
+			<span class="material-symbols-outlined dp morning" id="morning">
 				partly_cloudy_day
 			</span>
 
-			<span class="material-symbols-outlined timeIcon sunCon" id="sunCon">
+			<span class="material-symbols-outlined dp afternoon" id="afternoon">
 				clear_day
 			</span>
 
-			<span class="material-symbols-outlined timeIcon nightCon" id="nightCon">
+			<span class="material-symbols-outlined dp evening" id="evening">
 				nights_stay
 			</span>
 
-			<ul class="notifikasiWelcome">
+			<ul class="notifi">
 
 				<!-- New  -->
-				<li class="nof newNof">
+				<li>
 
 					<a>
-						<span class="material-symbols-outlined notifikasiGIcon">
+						<span class="material-symbols-outlined icon">
 							Magic_Button
 						</span>
 
-						<div class="nofDot"></div>
+						<div class="mark"></div>
 					</a>
 					
 				</li>
 
 				<!-- Report  -->
-				<li class="nof reportNof">
+				<li>
 
 						<a>
-							<span class="material-symbols-outlined notifikasiGIcon">
+							<span class="material-symbols-outlined icon">
 								Chat
 							</span>
 
-							<div class="nofDot"></div>
+							<div class="mark"></div>
 						</a>
 						
 				</li>
@@ -203,31 +184,29 @@
 
 		</div>
 
-		<div class="statis">
+		<div class="statistika">
 
-			<div class="cbox saranaBox">
-				<canvas id="saranaChart"></canvas>
+			<div class="chart sarana">
+				<canvas id="chartsarana"></canvas>
 			</div>
 
-			<div class="cbox biayaBox">
-				<canvas id="biayaChart"></canvas>
+			<div class="chart dana">
+				<canvas id="chartdana"></canvas>
 			</div>
 			
 		</div>
 		
 		<div class="data">
 
-			<ul class="listTable">
+			<ul class="list">
 
 				<li>
-					<input class="seTable" id="seTable" type="search" name="telusuriInput" placeholder="Telurusi...">
+					<input class="search-input" id="search-input" type="text" name="keyword" placeholder="...">
 				</li>
 
-				
-
 				<li>
-					<button class="telusuriButtonClass" type="button" name="telusuriButton">
-						<span class="material-symbols-outlined searchIcon">
+					<button class="search-button" type="button" name="start-search">
+						<span class="material-symbols-outlined search">
 							search
 						</span>
 					</button>
@@ -236,9 +215,9 @@
 			</ul>
 			
 			
-			<table class="dataFormating">
+			<table class="format">
 
-				<tr class="trHead">
+				<tr class="head">
 	
 					<th class="tableHead nama-barang">Nama Barang</th>
 					<th class="tableHead kode-barang">Kode</th>
@@ -258,7 +237,7 @@
 
 				<!-- Looping Disini -->
 	
-				<tr class="daTable">
+				<tr class="content">
 	
 					<td class="dataTable nama-is">Komputer</td>
 					<td class="dataTable kode-is">001 - 5673 - 23</td>
@@ -285,11 +264,10 @@
 
 	dd
 
-	<!-- This is JavaScript Nest -->
-	<script src="js/index.js"></script>
+	<!-- Js Connection -->
+	<script src="../resource/js/index.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<script src="js/my_chart.js"></script>
-		 
+	<script src="../resource/js/statistika.js"></script>
 	
 </body>
 </html>

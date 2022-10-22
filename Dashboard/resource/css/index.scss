@@ -18,54 +18,89 @@ html {overflow-x: hidden;}
 body {
     max-width: 100%;
     height: 100%;
+
     padding: 0;
     margin: 0;
-    background: linear-gradient(145deg, #F3F3F3, #FEFEFE);
+
+    background-color: #fff;
+}
+
+@mixin neumorphism {
+    background-color: #fff;
+    box-shadow:  20px 20px 69px #cccccc,
+                -20px -20px 69px #ffffff;
+}
+
+@mixin s-neumorphism {
+    background: #ffffff;
+    box-shadow:  5px 5px 42px #cfcfcf,
+                -5px -5px 42px #ffffff;
+}
+
+@mixin i-s-neumorphism {
+    background: #ffffff;
+    box-shadow: inset 5px 5px 11px #cfcfcf,
+                inset -5px -5px 11px #ffffff;
 }
 
 header {
     position: fixed;
     width: 1920px;
     height: 80px;
+    
     display: flex;
     align-items: center;
+
     background-color: #fff;
     box-shadow: 0 17px 30px #dddddd;
+
     z-index: 10;
 
-    .header-title {
+    .webname {
         position: absolute;
+
         left: 30px;
+
         font-weight: 700;
         text-transform: uppercase;
         font-size: 23px;
-        padding: 7px 10px 4px 10px;
-        color: #2192FF;
-        outline: 2px dashed #2192FF;
         letter-spacing: 3.5px;
         font-family: "Comfortaa";
+
+        padding: 7px 10px 4px 10px;
+
+        color: #2192FF;
+        outline: 2px dashed #2192FF;
+
     }
 
     ul {
         position: absolute;
+
         display: flex;
         flex-direction: row;
         align-items: center;
         column-gap: 20px;
+
         right: 30px;
 
-        .name-profile {
+        .username {
             position: relative;
+
             list-style: none;
+
             font-family: "Roboto Slab";
         }
 
-        .image-cover {
+        .profile {
             position: relative;
-            list-style: none;
             width: 50px;
             height: 50px;
+
+            list-style: none;
+
             border-radius: 50px;
+
             overflow: hidden;
 
             img {
@@ -76,22 +111,26 @@ header {
     }
 }
 
-.navigation {
+.nav {
     position: fixed;
     width: 200px;
     height: 1080px;
+
     left: 0;
     top: 80px;
+
     background-color: #463CFF;
-    /* box-shadow: 0 1px 15px rgba(0, 0, 0, 0.3); */
-    background: #463CFF;
     box-shadow:  17px 0px 30px #dddddd;
+
     z-index: 11;
 
     ul {
         position: relative;
+
         list-style: none;
+
         margin-top: 20px;
+
         display: flex;
         flex-direction: column;
 
@@ -103,36 +142,44 @@ header {
                 position: relative;
                 width: 200px;
                 height: 60px;
-                font-family: "Comfortaa";
+
                 display: flex;
                 column-gap: 10px;
                 align-items: center;
-                justify-content: left;
-                color: #fff;
+                justify-content: left;                
+                
                 font-size: 14.2px;
                 font-weight: 600;
+                font-family: "Comfortaa";
                 text-transform: capitalize;
-                letter-spacing: 2px;
-                transition: 300ms;
                 text-decoration: none;
+                
+                letter-spacing: 2px;
+                
+                transition: 300ms;
+                
+                color: #fff;
 
                 .material-symbols-outlined {
                     margin-left: 20px;
+
                     transition: 300ms;
                 }
             }
         }
 
         li:hover {
-            background-color: #655CFF;
             cursor: pointer;
+
+            background-color: #655CFF;
         }
 
         li.active {
             width: 218px;
+
             border-bottom-right-radius: 8px;
             border-top-right-radius: 8px;
-            /* box-shadow: 0 0.7px 17px rgba(27, 1, 78, 0.19); */
+
             background: linear-gradient(145deg, #5003E9, #6622EB);
             box-shadow:  -18px 8px 25px #4F0ECF,
                         -18px -8px 25px #4F0ECF  ;
@@ -142,7 +189,7 @@ header {
                 font-size: 15.5px;
                 letter-spacing: 2.5px;
 
-                .navigationGIcon {
+                .Icon {
                     margin-left: 35px;
                 }
             }
@@ -164,13 +211,16 @@ header {
 
     background-color: transparent;
 
-    .time {
+    .list {
         position: relative;
+        width: 1400px;
+        height: 40px;
         
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: right;
+
         font-weight: 600;
         font-size: 16px;
     
@@ -180,12 +230,9 @@ header {
         left: 50%;
         transform: translateX(-50%);
         
-        width: 1400px;
-        height: 40px;
-        
         list-style: none;
 
-        .says {
+        .say {
             position: absolute;
             left: 5px;
             top: 50%;
@@ -197,22 +244,24 @@ header {
         
             font-family: 'Montserrat';
 
-            .ucapan {
+            .text {
                 position: relative;
                 width: fit-content;
                 height: fit-content;
 
                 font-weight: 600;
                 font-size: 25px;
-                
-                background: linear-gradient(90deg, var(--color-js), #F637EC);
+
+                text-transform: capitalize;
+
+                background: linear-gradient(90deg, var(--coloors), #F637EC);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
             }
         }
 
-        .clock {
+        .time {
             position: relative;
             width: 110px;
             height: 40px;
@@ -223,14 +272,15 @@ header {
         
             font-family: 'Montserrat';
             letter-spacing: 2px;
+
+            transition: 300ms;
         
             border-radius: 10px;
-            background: linear-gradient(145deg, #f5f5f5, #FEFEFE);
-            box-shadow:  17px 17px 34px #dddddd,
-                        -17px -17px 34px #ffffff;
+            
+            @include s-neumorphism;
         }
 
-        .hari {
+        .date {
             position: relative;
             width: 285px;
             height: 40px;
@@ -241,31 +291,34 @@ header {
         
             font-family: 'Montserrat';
             letter-spacing: 2px;
+
+            transition: 300ms;
         
             border-radius: 10px;
-            background: linear-gradient(145deg, #f5f5f5, #FEFEFE);
-            box-shadow:  17px 17px 34px #dddddd,
-                        -17px -17px 34px #ffffff;
+            
+            @include s-neumorphism;
         }
     }
 
-    .welcome {
+    .card {
         position: relative;
-        left: 50%;
-        transform: translate(-50%);
         width: 1400px;
         height: 200px;
+
+        left: 50%;
+        transform: translate(-50%);
     
         padding: 20px 30px;
-        font-family: 'Montserrat';
-        
-        border-radius: 15px;
-        background: linear-gradient(145deg, #f5f5f5, #FEFEFE);
-        box-shadow:  17px 17px 35px #dddddd,
-        -17px -17px 35px #ffffff;
 
-        .randomText {
+        font-family: 'Montserrat';
+
+        border-radius: 26px;
+
+        @include neumorphism;
+
+        .random {
             position: absolute;
+
             top: 47%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -276,7 +329,27 @@ header {
             letter-spacing: 2px;
         }
 
-        .notifikasiWelcome {
+        .dp {
+            position: absolute;
+
+            right: 60px;
+            top: 50%;
+            transform: translate(0, -50%);
+
+            opacity: 0;
+
+            font-size: 95px;
+
+            transition: 300ms;
+        }
+
+        .morning {color: #2192FF;}
+
+        .afternoon {color: #FCE700;}
+
+        .evening {color: #04009A;}
+
+        .notifi {
             position: absolute;
             width: 400px;
             height: 50px;
@@ -289,7 +362,7 @@ header {
         
             list-style: none;
 
-            .nof {
+            li {
                 position: relative;
                 width: 50px;
                 height: 50px;
@@ -299,20 +372,20 @@ header {
                 justify-content: center;
             
                 padding-top: 5px;
+
                 transition: 300ms;
+
                 border-radius: 50px;
             
                 cursor: pointer;
             
-                background: #f5f5f5;
-                box-shadow: inset 5px 5px 20px #dddddd,
-                inset -5px -5px 20px #ffffff;
+                @include i-s-neumorphism;
 
-                .notifikasiGIcon {
+                .icon {
                     font-size: 26px;
                 }
 
-                .nofDot {
+                .mark {
                     position: absolute;
                     width: 10px;
                     height: 10px;
@@ -327,33 +400,16 @@ header {
             }
         }
 
-        .timeIcon {
+        .listIcon {
             position: absolute;
             cursor: default;
           
             font-size: 100px;
+
             right: 0%;
             top: 50%;
             transform: translate(-50%, -50%);
           
-        }
-
-        .morningCon {
-            display: block;
-            
-            color: #2192FF;
-        }
-
-        .sunCon {
-            display: block;
-            
-            color: #FCE700;
-        }
-
-        .nightCon {
-            display: block;
-            
-            color: #04009A;
         }
     }
 
@@ -365,7 +421,7 @@ header {
         left: 30px;
         margin-top: 50px;
 
-        .dataFormating {
+        .format {
             position: relative;
             width: 1400px;
         
@@ -379,16 +435,14 @@ header {
         
             border-radius: 10px;
         
-            background: #f5f5f5;
-            box-shadow:  12px 12px 23px #dddddd,
-                        -12px -12px 23px #ffffff;
+            @include neumorphism;
             
             table {
                 width: 100%;
                 border-collapse: collapse;
             }
 
-            .trHead {
+            .head {
                 position: relative;
                 width: 1300px;
                 height: 40px;
@@ -399,9 +453,11 @@ header {
                 background-color: #2192FF;
             }
 
-            .daTable {
+            .content {
                 height: 60px;
+
                 text-align: center;
+
                 font-weight: 500;
                 letter-spacing: 1px;
                 
@@ -412,70 +468,14 @@ header {
                 background-color: #fff;
             }
         }
-
-        .listTable {
-            position: relative;
-            width: 1500px;
-            height: 40px;
-        
-            left: 0;
-            top: 0;
-        
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        
-            list-style: none;
-            margin-bottom: 20px;
-        
-            column-gap: 20px;
-
-            li .seTable {
-                position: relative;
-                width: 400px;
-                height: 40px;
-            
-                border-radius: 5px;
-                border: none;
-                outline: none;
-                
-                padding: 10px 15px;
-                font-family: 'Comfortaa';
-                letter-spacing: 1.5px;
-            
-                font-weight: 600;
-            
-                left: 0;
-                top: 0;
-            
-                border-radius: 10px;
-                background: #f5f5f5;
-                box-shadow: inset 4px 4px 8px #d8d8d8,
-                            inset -4px -4px 8px #ffffff;
-            }
-
-            li .telusuriButtonClass {
-                width: 40px;
-                height: 40px;
-                border-radius: 10px;
-            
-                border: none;
-                outline: none;
-                transition: 300ms;
-                cursor: pointer;
-            
-                background: #f5f5f5;
-                box-shadow: inset 4px 4px 8px #d8d8d8,
-                            inset -4px -4px 8px #ffffff;
-            }
-        }
     }
 
-    .statis {
+    .statistika {
         position: relative;
-        left: 30px;
         width: 1400px;
         height: fit-content;
+
+        left: 30px;
     
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -483,15 +483,14 @@ header {
         
         margin-top: 50px;
 
-        .cbox {
+        .chart {
             position: relative;
         
             padding: 10px;
         
             border-radius: 15px;
-            background: linear-gradient(145deg, #F3F3F3, #FEFEFE);
-            box-shadow:  17px 17px 35px #dddddd,
-                    -17px -17px 35px #ffffff;
+            
+            @include neumorphism;
         }
     }
 }
