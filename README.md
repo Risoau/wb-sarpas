@@ -9,25 +9,33 @@
 * Dapatkan kabar terbaru tentang pengemabangan website <span>Sarpas</span> melalui :
     * [Github](https://github.com/Risoau/wb-sarpas)
 
+<div>
+
 <style>
 
-    * {
-        box-sizing: border-box; 
-    }
+* {
+    box-sizing: border-box; 
+}
 
-    h1, span {
-        text-align: center;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: #2192FF ;
-    }
+div {
+    display: none;
+}
 
-    img {
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        margin: 10px;
-    }
+h1, span {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #2192FF ;
+}
+
+img {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 10px;
+}
 
 </style>
+
+</div>
