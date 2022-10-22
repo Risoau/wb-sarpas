@@ -25,10 +25,13 @@
 </head>
 <body>
 
+	<div class="path"></div>
+	<div class="progress"></div>
+
 	<!-- Header  -->
 	<header>
 		
-		<p class="webname">
+		<p class="webname" onclick="window.location.href = 'index.html';">
 			Sarpas
 		</p>
 		
@@ -52,7 +55,7 @@
 		<ul>
 
 			<!-- Dashboard -->
-			<li class="lii dashboard active">
+			<li class="lii dashboard active" onclick="window.scrollTo(0, 0);">
 
 					<a>
 						<span class="material-symbols-outlined Icon">
@@ -65,7 +68,7 @@
 			</li>
 
 			<!-- Update  -->
-			<li class="lii update">
+			<li class="lii update" onclick="window.scrollTo(0, 820);">
 
 					<a>
 						<span class="material-symbols-outlined Icon">
@@ -126,7 +129,7 @@
 		<ul class="list">
 
 			<li>
-				<p class="say">
+				<p class="say" id="dasboard-say">
 					<span class="text" id="text">Good Morning,</span> Farhan !
 				</p>
 			</li>
@@ -187,33 +190,26 @@
 		<div class="statistika">
 
 			<div class="chart sarana">
-				<canvas id="chartsarana"></canvas>
+				<canvas id="chartsarana" width="100%"></canvas>
 			</div>
 
 			<div class="chart dana">
-				<canvas id="chartdana"></canvas>
+				<canvas id="chartdana" width="100%"></canvas>
 			</div>
 			
 		</div>
+
+		<ul class="list">
+
+			<li>
+				<p class="say">
+					<span class="text" id="text">Update</span>
+				</p>
+			</li>
+
+		</ul>
 		
-		<div class="data">
-
-			<ul class="list">
-
-				<li>
-					<input class="search-input" id="search-input" type="text" name="keyword" placeholder="...">
-				</li>
-
-				<li>
-					<button class="search-button" type="button" name="start-search">
-						<span class="material-symbols-outlined search">
-							search
-						</span>
-					</button>
-				</li>
-				
-			</ul>
-			
+		<div class="data">			
 			
 			<table class="format">
 
@@ -260,9 +256,13 @@
 						
 		</div>
 
-	</div>
+		<div class="update-main" id="update-main">
 
-	dd
+			Apaaan tuh??
+			
+		</div>
+
+	</div>
 
 	<!-- Js Connection -->
 	<script src="../resource/js/index.js"></script>

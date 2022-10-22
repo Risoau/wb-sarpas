@@ -5,7 +5,30 @@
     box-sizing: border-box;
 }
 
-html {overflow-x: hidden;}
+@mixin customScroll {
+    position: fixed;
+    top: 0;
+    right: 0;
+    
+    width: 10px;
+    height: 100%;
+}
+
+.path {
+    @include customScroll();
+}
+
+@keyframes anmate {
+    0%, 100% {
+        background: hue(0deg);
+    }
+
+    50% {
+        background: hue(360deg);
+    }
+}
+
+html {overflow-x: hidden; scroll-behavior: smooth;}
 
 body {
     max-width: 100%;
@@ -14,7 +37,20 @@ body {
     padding: 0;
     margin: 0;
 
+    display: flex;
+    justify-content: center;
+
     background-color: #fff;
+}
+
+@mixin mainstyle {
+    position: relative;
+    top: 120px;
+    left: 46%;
+    transform: translate(-50%);
+
+    width: 1500px;
+    height: 120em;
 }
 
 @mixin neumorphism {
@@ -39,6 +75,10 @@ header {
     position: fixed;
     width: 1920px;
     height: 80px;
+
+    left: 0;
+    top: 0;
+    right: 0;
     
     display: flex;
     align-items: center;
@@ -52,6 +92,8 @@ header {
         position: absolute;
 
         left: 30px;
+
+        cursor: pointer;
 
         font-weight: 700;
         text-transform: uppercase;
@@ -190,18 +232,16 @@ header {
 }
 
 .main {
-    position: absolute;
-    left: 55%;
-    top: 52%;
-    transform: translate(-50%, -50%);
 
-    width: 1500px;
-    height: 800px;
-    padding: 0 20px;
+    @include mainstyle;
 
     font-size: 20px;
 
-    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    
+    row-gap: 40px;
+    padding: 0 30px;
 
     .list {
         position: relative;
@@ -217,11 +257,7 @@ header {
         font-size: 16px;
     
         column-gap: 40px;
-        margin-bottom: 30px;
-    
-        left: 50%;
-        transform: translateX(-50%);
-        
+            
         list-style: none;
 
         .say {
@@ -297,24 +333,17 @@ header {
         width: 1400px;
         height: 200px;
 
-        left: 50%;
-        transform: translate(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     
-        padding: 20px 30px;
-
         font-family: 'Montserrat';
 
         border-radius: 26px;
 
         @include neumorphism;
 
-        .random {
-            position: absolute;
-
-            top: 47%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
+        .random {            
             text-transform: capitalize;
         
             font-weight: 600;
@@ -324,10 +353,8 @@ header {
         .dp {
             position: absolute;
 
-            right: 60px;
-            top: 50%;
-            transform: translate(0, -50%);
-
+            right: 8%;
+            
             opacity: 0;
 
             font-size: 95px;
@@ -343,9 +370,9 @@ header {
 
         .notifi {
             position: absolute;
-            width: 400px;
-            height: 50px;
-        
+
+            left: 30px;
+            
             display: flex;
             flex-direction: row;
             column-gap: 30px;
@@ -408,14 +435,10 @@ header {
     .data {
         position: relative;
         width: 1400px;
-        height: 800px;
+        height: fit-content;
     
-        left: 30px;
-        margin-top: 50px;
-
         .format {
-            position: relative;
-            width: 1400px;
+            width: 100%;
         
             font-family: 'Montserrat';
             font-size: 14px;
@@ -436,7 +459,7 @@ header {
 
             .head {
                 position: relative;
-                width: 1300px;
+                width: 100%;
                 height: 40px;
             
                 color: #fff;
@@ -463,26 +486,23 @@ header {
     }
 
     .statistika {
-        position: relative;
-        width: 1400px;
+        max-width: 1400px;
         height: fit-content;
-
-        left: 30px;
     
-        display: grid;
-        grid-template-columns: 2fr 1fr;
+        display: flex;
+        flex-direction: row;
         column-gap: 40px;
-        
-        margin-top: 50px;
-
-        .chart {
-            position: relative;
-        
+                
+        .chart {            
             padding: 10px;
-        
+                        
             border-radius: 15px;
             
             @include neumorphism;
         }
+
+        .sarana {width: 900px;}
+
+        .dana {width: 460px;}
     }
 }
