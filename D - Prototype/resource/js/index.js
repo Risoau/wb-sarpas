@@ -74,13 +74,13 @@
 
         period(gets, colors);
     }
-    else if ( hour >= 13 && hour <= 18 ) {
+    else if ( hour >= 13 && hour <= 17 ) {
         let gets = "afternoon";
         let colors = '#FCE700';
 
         period(gets, colors);
     }
-    else if ( hour >= 19 && hour <= 24 ) {
+    else if ( hour >= 18 && hour <= 24 ) {
         let gets = 'evening';
         let colors = '#04009A';
 
@@ -92,7 +92,13 @@
 
 // };
 
+let progressScrollBar = document.getElementById("progress");
 
+let heightTotal = document.body.scrollHeight + window.innerHeight;
+window.onscroll = function() {
+    let progressScrollBarHeight = (window.pageYOffset / heightTotal) * 100;
+    progressScrollBar.style.height = progressScrollBarHeight + "%" ;
+}
 
 
 

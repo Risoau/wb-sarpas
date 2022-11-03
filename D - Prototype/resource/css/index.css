@@ -1,0 +1,327 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.path {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.progress {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  border-radius: 3px;
+  background: linear-gradient(to top, #13A8FF, #72FFFF);
+  -webkit-animation: animate 30s linear infinite;
+          animation: animate 30s linear infinite;
+}
+
+.progress::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, #13A8FF, #72FFFF);
+  box-shadow: -12px 0 20px #72FFFF;
+  filter: blur(10px);
+}
+
+@-webkit-keyframes animate {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.main {
+  position: relative;
+  top: 120px;
+  left: 46%;
+  transform: translate(-50%);
+  width: 1500px;
+  height: 120em;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  padding: 0 30px;
+}
+.main .list {
+  position: relative;
+  width: 1400px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  font-weight: 600;
+  font-size: 16px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  list-style: none;
+}
+.main .list .jumpIoc {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translate(0%, -50%);
+  font-size: 28px;
+  background: linear-gradient(90deg, var(--coloors), #F637EC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.main .list .say {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translate(0%, -50%);
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0.8px;
+  font-family: "Montserrat";
+}
+.main .list .say .text {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: capitalize;
+  background: linear-gradient(90deg, var(--coloors), #F637EC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.main .list button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 35px;
+  padding: 0 10px;
+  border: none;
+  font-weight: 600;
+  font-family: "Montserrat";
+  letter-spacing: 2px;
+  color: white;
+  border-radius: 6px;
+}
+.main .list .sarana {
+  background-color: #2192FF;
+}
+.main .list .prasarana {
+  background-color: #7B16E2;
+}
+.main .list .sub {
+  left: 38px;
+}
+.main .list .time {
+  position: relative;
+  width: 110px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat";
+  letter-spacing: 2px;
+  transition: 300ms;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 42px #cfcfcf, -5px -5px 42px #ffffff;
+}
+.main .list .date {
+  position: relative;
+  width: 285px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat";
+  letter-spacing: 2px;
+  transition: 300ms;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 42px #cfcfcf, -5px -5px 42px #ffffff;
+}
+.main .card {
+  position: relative;
+  width: 1400px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  border-radius: 26px;
+  background-color: #fff;
+  box-shadow: 20px 20px 69px #cccccc, -20px -20px 69px #ffffff;
+}
+.main .card .random {
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.main .card .dp {
+  position: absolute;
+  right: 5%;
+  opacity: 0;
+  font-size: 95px;
+  transition: 300ms;
+}
+.main .card .morning {
+  color: #2192FF;
+}
+.main .card .afternoon {
+  color: #FCE700;
+}
+.main .card .evening {
+  color: #04009A;
+}
+.main .card .notifi {
+  position: absolute;
+  left: 30px;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  bottom: 25px;
+  list-style: none;
+}
+.main .card .notifi li {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  transition: 300ms;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #ffffff;
+  box-shadow: inset 5px 5px 11px #cfcfcf, inset -5px -5px 11px #ffffff;
+}
+.main .card .notifi li .icon {
+  font-size: 26px;
+}
+.main .card .notifi li .mark {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 2px;
+  right: 2px;
+  border-radius: 50px;
+  background-color: #FF1E1E;
+}
+.main .card .listIcon {
+  position: absolute;
+  cursor: default;
+  font-size: 100px;
+  right: 0%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .data {
+  position: relative;
+  width: 1400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.main .data .format {
+  width: 100%;
+  font-family: "Montserrat";
+  font-size: 14px;
+  overflow: hidden;
+  border: none;
+  border-collapse: collapse;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 20px 20px 69px #cccccc, -20px -20px 69px #ffffff;
+}
+.main .data .format table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.main .data .format .head {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  letter-spacing: 1px;
+  background-color: #2192FF;
+}
+.main .data .format .content {
+  height: 60px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background-color: #f8f8f8;
+}
+.main .data .format .daTable:nth-child(even) {
+  background-color: #fff;
+}
+.main .statistika {
+  max-width: 1400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+.main .statistika .chart {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 20px 20px 69px #cccccc, -20px -20px 69px #ffffff;
+}
+.main .statistika .sarana {
+  width: 900px;
+}
+.main .statistika .dana {
+  width: 460px;
+}/*# sourceMappingURL=index.css.map */

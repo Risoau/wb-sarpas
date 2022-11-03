@@ -1,273 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
 
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Connection -->
+    <link rel="stylesheet" href="../resource/css/style.css">
 
-	<title>Dashboard Beta</title>
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono" />
 
-	<!-- CSS Connection -->
-	<link rel="stylesheet" href="../resource/css/index.css">
-
-	<!-- Google Font -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fuzzy+Bubbles">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-
-	<!-- Google Icon -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-	
+    <!-- Google Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
 
-	<div class="path"></div>
-	<div class="progress"></div>
+    <header>
+        <ul class="list">
+            <li class="logo">
+                <img src="../resource/element/planet-svgrepo-com.svg" alt="sarpas-logo">
+            </li>
 
-	<!-- Header  -->
-	<header>
-		
-		<p class="webname" onclick="window.location.href = 'index.html';">
-			Sarpas
-		</p>
-		
-		<ul>
+            <li class="items">
+                <span class="material-symbols-outlined">
+                    bar_chart
+                </span>
+            </li>
+            
+            <li class="items">
+                <span class="material-symbols-outlined">
+                    insights
+                </span>
+            </li>
 
-			<li class="username">
-				Farhan Raditya Al Gazali
-			</li>
+            <li class="items">
+                <span class="material-symbols-outlined">
+                    logout
+                </span>
+            </li>
 
-			<li class="profile">
-				<img src="../resource/image/hutao.jpg">
-			</li>
-			
-		</ul>
-		
-	</header>
+            <li class="profile">
+                <img src="../resource/image/hutao.jpg" alt="hutao">
+            </li>
+        </ul>
+    </header>
 
-	<!-- Navigation -->
-	<div class="nav">
+    <div class="main">
+        <div class="title">
+            Sarana & Prasarana
+        </div>
 
-		<ul>
+        <div class="value-chart">
+            <div class="value">
+                <span class="material-symbols-outlined">
+                    attach_money
+                </span>
+                <p class="value-money">54.234.234</p>
+            </div>
 
-			<!-- Dashboard -->
-			<li class="lii dashboard active" onclick="window.scrollTo(0, 0);">
+            <div class="diagram">
+                <canvas id="value-chart-canvas"></canvas>
+            </div>
+        </div>
+    </div>
 
-					<a>
-						<span class="material-symbols-outlined Icon">
-							Dashboard
-						</span>
-						
-						<p>Dashboard</p>
-					</a>
-					
-			</li>
-
-			<!-- Update  -->
-			<li class="lii update" onclick="window.scrollTo(0, 820);">
-
-					<a>
-						<span class="material-symbols-outlined Icon">
-							Update
-						</span>
-
-						<p>Update</p>
-					</a>
-					
-			</li>
-
-			<!-- New  -->
-			<li class="lii new">
-
-					<a>
-						<span class="material-symbols-outlined Icon">
-							Magic_Button
-						</span>
-
-						<p>New</p>
-					</a>
-					
-			</li>
-
-			<!-- Report  -->
-			<li class="lii report">
-
-					<a>
-						<span class="material-symbols-outlined Icon">
-							Chat
-						</span>
-
-						<p>Report</p>
-					</a>
-					
-			</li>
-
-			<!-- Setting  -->
-			<li class="lii setting">
-
-					<a>
-						<span class="material-symbols-outlined Icon">
-							Settings
-						</span>
-
-						<p>Settings</p>
-					</a>
-					
-			</li>
-			
-		</ul>
-		
-	</div>
-
-	<!-- Main  -->
-	<div class="main">
-
-		<ul class="list">
-
-			<li>
-				<p class="say" id="dasboard-say">
-					<span class="text" id="text">Good Morning,</span> Farhan !
-				</p>
-			</li>
-
-			<li class="time" id="time"></li>
-			<li class="date" id="date"></li>
-			
-		</ul>
-
-		<div class="card">
-
-			<p class="random" id="random">"Jika mau mu itu maka berusahalah!"</p>
-
-			<span class="material-symbols-outlined dp morning" id="morning">
-				partly_cloudy_day
-			</span>
-
-			<span class="material-symbols-outlined dp afternoon" id="afternoon">
-				clear_day
-			</span>
-
-			<span class="material-symbols-outlined dp evening" id="evening">
-				nights_stay
-			</span>
-
-			<ul class="notifi">
-
-				<!-- New  -->
-				<li>
-
-					<a>
-						<span class="material-symbols-outlined icon">
-							Magic_Button
-						</span>
-
-						<div class="mark"></div>
-					</a>
-					
-				</li>
-
-				<!-- Report  -->
-				<li>
-
-						<a>
-							<span class="material-symbols-outlined icon">
-								Chat
-							</span>
-
-							<div class="mark"></div>
-						</a>
-						
-				</li>
-				
-			</ul>
-
-		</div>
-
-		<div class="statistika">
-
-			<div class="chart sarana">
-				<canvas id="chartsarana" width="100%"></canvas>
-			</div>
-
-			<div class="chart dana">
-				<canvas id="chartdana" width="100%"></canvas>
-			</div>
-			
-		</div>
-
-		<ul class="list">
-
-			<li>
-				<p class="say">
-					<span class="text" id="text">Update</span>
-				</p>
-			</li>
-
-		</ul>
-		
-		<div class="data">			
-			
-			<table class="format">
-
-				<tr class="head">
-	
-					<th class="tableHead nama-barang">Nama Barang</th>
-					<th class="tableHead kode-barang">Kode</th>
-					<th class="tableHead quantitas-barang">Quantitas</th>
-	
-					<th class="tableHead unit-barang">Unit</th>
-					<th class="tableHead merk-barang">Merek</th>
-					<th class="tableHead diperoleh-tahun-barang">Diperoleh Tahun</th>
-	
-					<th class="tableHead kondisi-barang">Kondisi</th>
-					<th class="tableHead harga-barang">Harga Per Unit</th>
-					<th class="tableHead validasi-barang">Validasi</th>
-	
-					<th class="tableHead diperoleh-dari-barang">Diperoleh Dari</th>
-	
-				</tr>
-
-				<!-- Looping Disini -->
-	
-				<tr class="content">
-	
-					<td class="dataTable nama-is">Komputer</td>
-					<td class="dataTable kode-is">001 - 5673 - 23</td>
-					<td class="dataTable quantitas-is">1</td>
-					
-					<td class="dataTable unit-is">1</td>
-					<td class="dataTable merk-is">Asus</td>
-					<td class="dataTable diperoleh-is">2022</td>
-	
-					<td class="dataTable kondisi-is">Baik</td>
-					<td class="dataTable harga-is">Rp 95.000.000</td>
-					<td class="dataTable validasi-is"></td>
-	
-					<td class="dataTable diperoleh-dari-is">Heon</td>
-				</tr>
-
-				<!-- Sampai sini -->
-				
-			</table>
-						
-		</div>
-
-		<div class="update-main" id="update-main">
-
-			Apaaan tuh??
-			
-		</div>
-
-	</div>
-
-	<!-- Js Connection -->
-	<script src="../resource/js/index.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<script src="../resource/js/statistika.js"></script>
-	
+    <!-- Chart JS Connection -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../resource/js/chart.js"></script>
+    
 </body>
 </html>

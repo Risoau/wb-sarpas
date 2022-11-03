@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+  width: 90px;
+  height: 95%;
+  padding: 20px 0;
+  border-radius: 15px;
+  background-color: #FF2A9C;
+}
+header ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
+}
+header ul .logo {
+  width: 100%;
+  height: 30px;
+}
+header ul .logo img {
+  width: 100%;
+  height: 100%;
+  transform: rotate(40deg);
+}
+header ul .items .material-symbols-outlined {
+  font-size: 30px;
+  color: #fff;
+}
+header ul .profile {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 150px;
+}
+header ul .profile img {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  position: absolute;
+  width: 1500px;
+  height: 95%;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  padding: 10px 25px;
+  border-radius: 15px;
+  background-color: #FF2A9C;
+}
+.main .title {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-family: "Montserrat";
+  color: #fff;
+}
+.main .value-chart {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.main .value-chart .value {
+  position: relative;
+  width: 300px;
+  height: 60px;
+  font-family: "Roboto Mono";
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: #000;
+  border-radius: 10px;
+  background: #fdfdfd;
+}
+.main .value-chart .value .material-symbols-outlined {
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+.main .value-chart .value .value-money {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.main .value-chart .diagram {
+  position: relative;
+  width: 800px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 10px;
+  background: #FDFDFD;
+  box-shadow: 7px 7px 15px #f3f3f3, -7px -7px 15px #f3f3f3;
+}/*# sourceMappingURL=style.css.map */
